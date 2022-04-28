@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import PlaceIcon from '@mui/icons-material/Place';
 import ForumIcon from '@mui/icons-material/Forum';
 import AltRouteIcon from '@mui/icons-material/AltRoute';
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 
 export default function Sidebar() {
   return (
@@ -62,19 +63,23 @@ export default function Sidebar() {
               Feedback
             </li>
             </Link>
+            <Link to="/thematiques">
             <li className="sidebarListItem">
               <AltRouteIcon className="sidebarIcon" />
               Route
-            </li>
+            </li> 
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
+          <h3 className="sidebarTitle">Add</h3>
           <ul className="sidebarList">
+            <Link to="/addc">
             <li className="sidebarListItem">
-              <MailOutline className="sidebarIcon" />
-              Mail
-            </li>
+              <AddLocationAltIcon color="gray" className="sidebarIcon" />
+              Add route
+            </li> 
+            </Link>
             <li className="sidebarListItem">
               <DynamicFeed className="sidebarIcon" />
               Feedback
@@ -86,7 +91,7 @@ export default function Sidebar() {
           </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Staff</h3>
+          <h3 className="sidebarTitle">update</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <WorkOutline className="sidebarIcon" />

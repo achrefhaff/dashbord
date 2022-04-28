@@ -1,0 +1,47 @@
+
+.addroute{
+    flex: 4;
+    padding: 20px;
+} 
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } 
+  .nomth{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+  } 
+  .descth{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: 300;
+
+  }
+  .nbr_etages{
+      margin-top: 10px;
+  }
+  .kilometrage{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: 300;
+  } 
+  .Duree{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: 300; 
+  } .pressb{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+    margin-top: 50px;
+  }
