@@ -12,12 +12,19 @@ export default function Ajouterc() {
   const [deplo,setdeplo]=useState(''); 
   const [depla,setdepla]=useState('');
 
- 
+  console.log(nomt);
+  console.log(desct); 
+  console.log(cadt)
+  console.log(kilom)
+  console.log(duree)
+  console.log(deplo)
+  console.log(depla)
   const addThematique=async()=>{
+    
              await axios
-             .post("http://localhost:8000/api/v1/thematique", {
-          nom_thematique:nomt,
-     			description_thematique:desct,
+             .post('http://localhost:8000/api/v1/thematique', {
+          nom_thematique:nomt.toString(),
+     			description_thematique:desct.toString,
      			nbr_etape:2,
      			kilometrage:kilom,
      			duree:duree,
@@ -27,11 +34,10 @@ export default function Ajouterc() {
              })
              .then( res => {
                console.log(res)
+               console.log("ajout effectuer")
              });
          }
-         const handleDelete =()=>{
-           
-         }
+        
   return (
     <div className='addroute'>
       <div className="userTitleContainer">
@@ -121,7 +127,7 @@ export default function Ajouterc() {
                   />
                 </div>
                 <div className='pressb'>
-                <button className="userUpdateButton" onClick={addThematique}>Ajouter cercuit</button> 
+                <button className="pressb" onClick={addThematique()}>Ajouter cercuit</button> 
                 </div> 
     </div>
   )

@@ -1,6 +1,5 @@
-.thematique{
+.main{
     flex: 4;
-    align-items: center;
 } 
 .button{
     border-radius: 5px;
@@ -10,4 +9,6 @@
     background-color: darkblue;
     color: white;
     font-weight: 600;
+    align-items: center;
+    margin-top: 100px;
 }

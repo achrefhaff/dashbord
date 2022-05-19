@@ -3,11 +3,14 @@ import { DataGrid } from "@mui/x-data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useState,useEffect} from "react";
+import axios from "axios";
 export default function UserList() {
   //--------------------------data-------------------------
   const [users,setUsers]=useState([]);
   //--------------------state for celected id----------------
   const [Ids,setIds]=useState([]); 
+  const URl="http://localhost:8000/api/v1/user/"+Ids[0];
+  console.log(URl)
   useEffect(() => {
       fetch("http://localhost:8000/api/v1/users")
         .then((users) => users.json())
@@ -16,7 +19,12 @@ export default function UserList() {
   const handleDelete = (id) => {
     setUsers(users.filter((item) => item.id !== id));
   };
-  
+const updateuser =async()=>{
+  await axios.put(URl,{
+    is_admin:true
+  })
+
+}
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     
@@ -59,7 +67,7 @@ export default function UserList() {
         return (
           <>
             
-              <button className="userListEdit" onClick={console.log(Ids)} >set Admin</button>
+              <button className="userListEdit" onClick={updateuser()} >set Admin</button>
           
             <DeleteOutline
               className="userListDelete"
