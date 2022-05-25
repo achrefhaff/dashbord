@@ -59,7 +59,7 @@ const columns1 = [
 
  const addThematique=async()=>{
      await axios
-     .post("http://localhost:8000/api/v1/monum_thematique", {
+     .post(`http://localhost:8000/api/v1/monum_thematique`, {
      ThematiqueId:toString( thnom[0].id),
        MonumentId: toString(nomnom[0].id),
        nomMonument: toString(nomnom[0].nom_monument),

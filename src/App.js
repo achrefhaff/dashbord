@@ -20,6 +20,8 @@ import Ajouterc from "./pages/ajouter_cercuit/ajouterc";
 import Mthematique from "./pages/monument thehmatiques/mthematique";
 import Uthematique from "./pages/thematiques update/uthematique";
 import Contribution from "./pages/contribution/contribution";
+import Deleate from "./pages/deleate route/deleate";
+import Update from "./pages/update route/update";
 function App() {
   
   return (
@@ -30,16 +32,19 @@ function App() {
        
         <Switch>
          
-        <Route path="/home" exact component={Home} />
-        <Route path="/users" exact component={UserList} />   
-        <Route path="/feed" exact component={Feedback} /> 
-        <Route path="/monuments" exact component={Monuments} /> 
-        <Route path="/thematiques" exact component={Thematique} />  
-        <Route path="/addu" exact component={User}/> 
-        <Route path="/addc" exact component={Ajouterc}/>
-        <Route path="/monumentt" exact component={Mthematique} />
-        <Route path="/updatet" exact component={Uthematique} />
-        <Route path="/contribution" exact component={Contribution}/>
+        <Route path="/home"  component={Home} />
+        <Route path="/users"  component={UserList} />   
+        <Route path="/feed"  component={Feedback} /> 
+        <Route path="/monuments"  component={Monuments} /> 
+        <Route path="/thematiques"  component={Thematique} />  
+        <Route path="/addu"  component={User}/> 
+        <Route path="/addc"  component={Ajouterc}/>
+        <Route path="/monumentt"  component={Mthematique} />
+        <Route path="/updatet"  component={Uthematique} />
+        <Route path="/contribution"  component={Contribution}/>
+        <Route path="/deleate"  component={Deleate}/>
+        <Route path="/update" component={Update}/>
+
         </Switch>
           
         

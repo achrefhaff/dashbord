@@ -21,6 +21,7 @@ export default function Feedback() {
       { field: "message" ,headerName:"Massege",width:150},
       { field: "createdAt" ,headerName:"Creation date",width:150}, 
       { field: "emojie_reaction" ,headerName:"Rate",width:80},
+      { field: "UtilisateurId" ,headerName:"user code",width:80},
       {
         field: "action",
         headerName: "Action",

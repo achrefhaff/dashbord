@@ -85,7 +85,19 @@ export default function Sidebar() {
             
           </ul>
         </div>
-        <h3 className="sidebarTitle">Add</h3>
+        <h3 className="sidebarTitle">update</h3>
+        <Link to="deleate"> 
+        <li className="sidebarListItem">
+        <AltRouteIcon className="sidebarIcon" />
+             deleate Route  
+        </li>
+        </Link>
+        <Link to ="/update">
+        <li className="sidebarListItem">
+        <AltRouteIcon className="sidebarIcon" />
+              Route index 
+        </li>
+        </Link>
       </div>
     </div>
   );
