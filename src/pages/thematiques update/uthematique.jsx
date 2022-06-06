@@ -9,7 +9,7 @@ export default function Uthematique() {
    // ----------------get data---------------------
     const [thematiques,setthematiques]=useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8000/api/v1/thematiques")
+        axios.get("https://apidourbya.herokuapp.com/api/v1/thematiques")
         .then(res => {
           setthematiques(res.data)
         })
@@ -18,7 +18,7 @@ export default function Uthematique() {
       const [monument,setMonuments]=useState([]);
       
       useEffect(() => {
-        axios.get("http://localhost:8000/api/v1/monuments")
+        axios.get("https://apidourbya.herokuapp.com/api/v1/monuments")
         .then(res => {
           setMonuments(res.data)
         })
@@ -59,7 +59,7 @@ const columns1 = [
 
  const addThematique=async()=>{
      await axios
-     .post(`http://localhost:8000/api/v1/monum_thematique`, {
+     .post(`https://apidourbya.herokuapp.com/api/v1/monum_thematique`, {
      ThematiqueId:toString( thnom[0].id),
        MonumentId: toString(nomnom[0].id),
        nomMonument: toString(nomnom[0].nom_monument),

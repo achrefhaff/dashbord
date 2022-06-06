@@ -22,6 +22,9 @@ import Uthematique from "./pages/thematiques update/uthematique";
 import Contribution from "./pages/contribution/contribution";
 import Deleate from "./pages/deleate route/deleate";
 import Update from "./pages/update route/update";
+import Addm from "./pages/add monument/addm"
+import Deleatem from "./pages/deleate monument/deleatem"
+import Updatem from "./pages/update monument/updatem"
 function App() {
   
   return (
@@ -44,6 +47,9 @@ function App() {
         <Route path="/contribution"  component={Contribution}/>
         <Route path="/deleate"  component={Deleate}/>
         <Route path="/update" component={Update}/>
+        <Route path="/addm" component={Addm}/>
+        <Route path="/delm" component={Deleatem}/>
+        <Route path="/updm" component={Updatem}/>
 
         </Switch>
           

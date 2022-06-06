@@ -5,7 +5,7 @@ import "./contribution.css"
 export default function Contribution() {
     const [contribution,setcontribution]=useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8000/api/v1/contributions")
+        axios.get("https://apidourbya.herokuapp.com/api/v1/contributions")
         .then(res => {
             setcontribution(res.data)
         })
@@ -18,8 +18,8 @@ export default function Contribution() {
       { field: "image_importe", headerName: "image importer", width: 800, height:800,
       renderCell: (params) => {
         return (
-          <div className="userListUser">
-            <img className="userListImg" src={params.row.image_importe}  alt="" />
+          <div >
+            <img  src={params.row.image_importe}  alt="" />
             
           </div>
         );
@@ -27,8 +27,8 @@ export default function Contribution() {
       { field: "image_capture", headerName: "image capturer", width: 300, height:400,
       renderCell: (params) => {
         return (
-          <div className="userListUser">
-            <img className="userListImg" src={params.row.image_capture}  style={{width:300,height:400}} />
+          <div >
+            <img  src={params.row.image_capture}  style={{width:300,height:400}} />
             
           </div>
         );

@@ -22,7 +22,7 @@ export default function Ajouterc() {
   const addThematique=async()=>{
     
              await axios
-             .post('http://localhost:8000/api/v1/thematique', {
+             .post('https://apidourbya.herokuapp.com/api/v1/thematique', {
           nom_thematique:nomt.toString(),
      			description_thematique:desct.toString,
      			nbr_etape:2,

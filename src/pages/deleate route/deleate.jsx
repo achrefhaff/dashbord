@@ -7,7 +7,7 @@ export default function Deleate() {
     const [arrIds,setarrIds]=useState([]);
     const [thematiques,setthematiques]=useState([]);
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/v1/monum_thematiques`)
+        axios.get(`https://apidourbya.herokuapp.com/api/v1/monum_thematiques`)
         .then(res => {
             setthematiques(res.data)
         })
@@ -16,7 +16,7 @@ export default function Deleate() {
 //--------------------------------------------------------------------------------------
 console.log(arrIds);
 const deleate=()=>{
-    axios.delete(`http://localhost:8000/api/v1//monum_thematique/${arrIds}`);
+    axios.delete(`https://apidourbya.herokuapp.com/api/v1/monum_thematique/${arrIds}`);
 }
 //-------------------------------------------------------------------------------------
       const columns = [

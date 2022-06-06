@@ -7,7 +7,7 @@ import "./feedback.css"
 export default function Feedback() {
     const [feedback,setFeedback]=useState([]);
   useEffect(() => {
-      axios.get(`http://localhost:8000/api/v1/feedbacks`)
+      axios.get(`https://apidourbya.herokuapp.com/api/v1/feedbacks`)
       .then(res => {
           setFeedback(res.data)
       })
@@ -23,6 +23,20 @@ export default function Feedback() {
       { field: "emojie_reaction" ,headerName:"Rate",width:80},
       { field: "UtilisateurId" ,headerName:"user code",width:80},
       {
+        field: "photoOrVideo",
+        headerName: "feedback image",
+        width: 400,
+       
+        renderCell: (params) => {
+          return (
+            <div >
+              <img  src={params.row.photoOrVideo}  alt="" />
+              
+            </div>
+          );
+        }  
+      },
+      {
         field: "action",
         headerName: "Action",
         width: 150,
@@ -37,6 +51,7 @@ export default function Feedback() {
           );
         },
       },
+      
     ];
 
   return (

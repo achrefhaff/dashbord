@@ -7,7 +7,7 @@ export default function Update() {
     const [arrIds,setarrIds]=useState([]);
     const [num,setnum]=useState(0);
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/v1/monum_thematiques`)
+        axios.get(`https://apidourbya.herokuapp.com/api/v1/monum_thematiques`)
         .then(res => {
             setthematiques(res.data)
         })

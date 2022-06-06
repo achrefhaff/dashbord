@@ -9,10 +9,10 @@ export default function UserList() {
   const [users,setUsers]=useState([]);
   //--------------------state for celected id----------------
   const [Ids,setIds]=useState([]); 
-  const URl="http://localhost:8000/api/v1/user/"+Ids[0];
+  const URl="https://apidourbya.herokuapp.com/api/v1/user/"+Ids[0];
   console.log(URl)
   useEffect(() => {
-      fetch("http://localhost:8000/api/v1/users")
+      fetch("https://apidourbya.herokuapp.com/api/v1/users")
         .then((users) => users.json())
         .then((users) => setUsers(users))
     }, [])

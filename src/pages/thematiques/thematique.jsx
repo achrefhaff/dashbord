@@ -6,7 +6,7 @@ import { DeleteOutline } from "@material-ui/icons";
 export default function Thematique() {
     const [thematiques,setthematiques]=useState([]);
   useEffect(() => {
-      axios.get(`http://localhost:8000/api/v1/thematiques`)
+      axios.get(`https://apidourbya.herokuapp.com/api/v1/thematiques`)
       .then(res => {
         setthematiques(res.data)
       })

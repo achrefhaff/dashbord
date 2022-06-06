@@ -16,7 +16,9 @@ import PlaceIcon from '@mui/icons-material/Place';
 import ForumIcon from '@mui/icons-material/Forum';
 import AltRouteIcon from '@mui/icons-material/AltRoute';
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
-
+import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import DomainDisabledIcon from '@mui/icons-material/DomainDisabled';
+import BuildIcon from '@mui/icons-material/Build';
 export default function Sidebar() {
   return (
     <div className="sidebar">
@@ -78,11 +80,12 @@ export default function Sidebar() {
               Add route
             </li> 
             </Link>
+            <Link to="/addm">
             <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Feedback
+              <AddBusinessIcon className="sidebarIcon" />
+              add monuments
             </li>
-            
+            </Link>
           </ul>
         </div>
         <h3 className="sidebarTitle">update</h3>
@@ -96,6 +99,18 @@ export default function Sidebar() {
         <li className="sidebarListItem">
         <AltRouteIcon className="sidebarIcon" />
               Route index 
+        </li>
+        </Link>
+        <Link to ="/delm">
+        <li className="sidebarListItem">
+        <DomainDisabledIcon className="sidebarIcon" />
+              deleate monument 
+        </li>
+        </Link>
+        <Link to ="/updm">
+        <li className="sidebarListItem">
+        <BuildIcon className="sidebarIcon" />
+              update monuments 
         </li>
         </Link>
       </div>

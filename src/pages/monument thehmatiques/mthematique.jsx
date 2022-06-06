@@ -7,7 +7,7 @@ export default function Mthematique() {
 const [mthematiques,setmthematiques]=useState([]);
 const [thematiques,setthematiques]=useState([]);
   useEffect(() => {
-      axios.get(`http://localhost:8000/api/v1/monum_thematiques`)
+      axios.get(`https://apidourbya.herokuapp.com/api/v1/monum_thematiques`)
       .then(res => {
         setmthematiques(res.data)
       })
@@ -15,7 +15,7 @@ const [thematiques,setthematiques]=useState([]);
     }, []) ;
 
   useEffect(() => {
-      axios.get(`http://localhost:8000/api/v1/thematiques`)
+      axios.get(`https://apidourbya.herokuapp.com/api/v1/thematiques`)
       .then(res => {
         setthematiques(res.data)
       })

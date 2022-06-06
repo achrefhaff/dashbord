@@ -3,7 +3,7 @@ import"./monumentinfo.css"
 export default function Monumentinfo() {
     const [monument,setMonuments]=useState([]); 
     useEffect(() => {
-        fetch("http://localhost:8000/api/v1/monuments")
+        fetch("https://apidourbya.herokuapp.com/api/v1/monuments")
           .then((monument) => monument.json())
           .then((monument) => setMonuments(monument))
         }, []) 
