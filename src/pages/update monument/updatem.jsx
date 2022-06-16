@@ -1,6 +1,7 @@
 import { Button } from '@mui/material';
 import React,{useState,useEffect} from 'react'
 import { DataGrid } from '@mui/x-data-grid';
+import { DeleteOutline } from "@material-ui/icons";
 import "./updatem.css"
 export default function Updatem() {
     const [geom,setgeom]=useState(""); 
@@ -14,6 +15,7 @@ export default function Updatem() {
     const [adr,setadr]=useState("");
     const [desc,setdesc]=useState("");
     const [arrIds,setarrIds]=useState([]);
+    const [monumentSelected,setMonumentSelected]=useState([])
 
 
 
@@ -43,6 +45,24 @@ export default function Updatem() {
         { field: "horaire_ouverture_hiver", headerName: "open in winter", width: 90 },
         { field: "horaire_fermeture_hiver", headerName: "colse in winter", width: 90 }, 
         { field: "epoque_dominante", headerName: "dominant period", width: 90 },
+        {
+          field: "action",
+          headerName: "Action",
+          width: 150,
+          renderCell: (params) => {
+            return (
+              <>
+                
+                  <button className="userListEdit"  >update</button>
+              
+                <DeleteOutline
+                  className="userListDelete"
+                  
+                />
+              </>
+            );
+          },
+        },
     ]
 
 
@@ -55,12 +75,19 @@ console.log(arrIds)
       rows={monument}
       columns={columns}
       checkboxSelection
-     onSelectionModelChange={(ids)=>{
-         setarrIds(ids);
-     }}
+      onSelectionModelChange={(ids) => {
+        const selectedIDs = new Set(ids);
+        const selectedRowData = monument.filter((monument) =>
+          selectedIDs.has(monument.id.toString())
+        );
+        
+        setMonumentSelected(selectedRowData)
+        console.log(monumentSelected)
+        
+      }}
      /> 
       <div className="userTitleContainer">
-          <h1 className="userTitle">Add Monuments</h1>
+          <h1 className="userTitle">update Monuments</h1>
           </div> 
           <div className="nomth">
                   <label>geom</label>
@@ -166,9 +193,15 @@ console.log(arrIds)
                     onChange={(e)=>setdesc(e.target.value)}
                   />
                 </div>
-                <Button className='button'>update </Button>
+                <Button className='button' >update </Button>
                  
                 
     </div>
   )
 }
+/**
+ * 
+ * @todo: click on update btn => redirect to anoth page for edit*
+ * route http://localhost:3000/monument/${monumentSelected.id}
+ * then passing props(monumentSelected) to the new page of edit
+ */

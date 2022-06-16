@@ -22,7 +22,7 @@ export default function Update() {
         {field :"orderMonument" ,headerName:" orderMonument" ,width:90}
 
     ];    
-console.log(num)
+console.log(arrIds)
 
 
   return (

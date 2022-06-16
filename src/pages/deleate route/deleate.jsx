@@ -38,7 +38,7 @@ const deleate=()=>{
      }}
      /> 
    
-     <Button className='button' onClick={deleate()} >deleate</Button>
+     <Button className='button' onClick={deleate()} >delete</Button>
      
     </div>
   )

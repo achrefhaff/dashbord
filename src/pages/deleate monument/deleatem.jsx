@@ -51,7 +51,7 @@ export default function Deleatem() {
          setarrIds(ids);
      }}
      /> 
-     <Button onPaste={deleate()}>deleate</Button> 
+     <Button onPaste={deleate()}>delete</Button> 
     </div>
   )
 }

@@ -41,7 +41,7 @@ export default function Ajouterc() {
   return (
     <div className='addroute'>
       <div className="userTitleContainer">
-          <h1 className="userTitle">Add cercuit</h1>
+          <h1 className="userTitle">Ajouter circuit</h1>
           </div>  
           <div className="nomth">
                   <label>Nom Thematique</label>
