@@ -16,7 +16,7 @@ import User from "./pages/user/user";
 import Feedback from "./pages/feedback/Feedback";
 import Monuments from "./pages/monuments/monuments";
 import Thematique from "./pages/thematiques/thematique";
-import Ajouterc from "./pages/ajouter_cercuit/ajouterc";
+import Ajouterc from "./pages/ajouter_circuit/ajouterc";
 import Mthematique from "./pages/monument thehmatiques/mthematique";
 import Uthematique from "./pages/thematiques update/uthematique";
 import Contribution from "./pages/contribution/contribution";
