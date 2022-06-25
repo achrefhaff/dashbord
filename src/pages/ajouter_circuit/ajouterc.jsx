@@ -24,7 +24,7 @@ export default function Ajouterc() {
              await axios
              .post('https://apidourbya.herokuapp.com/api/v1/thematique', {
           nom_thematique:nomt.toString(),
-     			description_thematique:desct.toString,
+     			description_thematique:desct.toString(),
      			nbr_etape:nbre,
      			kilometrage:kilom,
      			duree:duree,
@@ -32,10 +32,10 @@ export default function Ajouterc() {
      			depart_latitude_circuit:depla,
      			categorie_thematique:cadt
              })
-             .then( res => {
-               console.log(res)
+             .then(
+              
                console.log("ajout effectuer")
-             });
+             );
          }
         
   return (
